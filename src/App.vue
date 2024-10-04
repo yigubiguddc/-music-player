@@ -1,30 +1,39 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
+  <FooterMusic/>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import FooterMusic from './components/item/FooterMusic.vue';
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default{
+  name: '',
+  components:{
+    FooterMusic,
   }
 }
+</script>
+
+<style lang="less">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.icon{
+  width: .5rem;
+  height: .5rem;
+  
+}
+a {
+  color:black;
+}
+
+@keyframes cyberpunkGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; } /* 在中间达到最大变化 */
+  100% { background-position: 0% 50%; }  /* 循环回到起点 */
+}
+
+
 </style>
